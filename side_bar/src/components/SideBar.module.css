@@ -1,0 +1,192 @@
+.sideBarContainer {
+  font-family: Inter;
+  position: absolute;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  top: 0;
+  left: 0;
+  width: 70px;
+  background-color: #dfd0b8;
+  height: 100vh;
+  font-weight: 700;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 6px 0px 19px -8px rgba(0, 0, 0, 0.25);
+}
+
+.expand {
+  width: 300px;
+}
+
+.title {
+  display: flex;
+  color: #153448;
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.noExpandTitle {
+  margin: 0;
+  color: #153448;
+  font-size: 2.4rem;
+  width: 70px;
+  text-align: center;
+}
+
+.noExpandTitle > p > span {
+  color: #3c5b6f;
+}
+.title > p > span {
+  color: #3c5b6f;
+}
+
+.expandButton {
+  position: fixed;
+  top: 15vh;
+  left: 55px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expandButton:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.expandButtonExpand {
+  left: 285px;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+.options > button {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  justify-items: center;
+  width: 90%;
+  color: #153448;
+  font-size: 1.5rem;
+  border: none;
+  height: 60px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: #ecdec7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
+}
+.options > button > span {
+  width: 100%;
+  text-align: left;
+}
+.options > button:hover {
+  background-color: #e6ded2;
+  cursor: pointer;
+}
+
+.noExpandOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  width: 70px;
+}
+.noExpandOptions > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  color: #153448;
+  font-size: 1.5rem;
+  background-color: #ecdec7;
+  border: none;
+  height: 60px;
+  margin: 5px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
+}
+.noExpandOptions > button:hover {
+  background-color: #e6ded2;
+  cursor: pointer;
+}
+.user {
+  display: flex;
+}
+.user {
+  display: flex;
+}
+.user > div {
+  margin: 0 auto;
+  height: 80%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+.userContainerExpand {
+  width: 90%;
+  background-color: #fbeeda;
+}
+.userContainer {
+  width: 55px;
+  background-color: #fbeeda;
+}
+.userImage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.userImage > img {
+  width: 45px;
+  margin: 0 auto;
+}
+.userImageExpand {
+  width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+  justify-content: space-between;
+}
+.userImageExpand > p {
+  margin: 0 auto;
+  color: #153448;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-wrap: wrap;
+}
+.userImageExpand > img {
+  width: 45px;
+}
+.logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.logout > button {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: center;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3rem;
+}
+.logout > button:hover {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
