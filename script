@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Función recursiva para recorrer todas las carpetas
+function instalar_en_carpetas {
+    # Recorre todas las carpetas y archivos en el directorio actual
+    for item in *; do
+        if [ -d "$item" ]; then
+            # Si es una carpeta, entra en ella y ejecuta npm install
+            cd "$item" || exit
+            if [ -f "package.json" ]; then
+                echo "Instalando en la carpeta: $item"
+                npm install
+            fi
+            # Llama recursivamente a la función para entrar en la siguiente carpeta
+            instalar_en_carpetas
+            # Regresa al directorio anterior
+            cd ..
+        fi
+    done
+}
+
+# Llama a la función para iniciar el proceso
+instalar_en_carpetas
