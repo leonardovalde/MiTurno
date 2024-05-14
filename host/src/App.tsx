@@ -1,14 +1,37 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import './index.css'
+import SideBar from 'side_bar/SideBar'
 
+import './index.css'
+const props = {
+  options: [
+    {
+      title: 'Ver Turnos',
+      icon: 'ic:baseline-format-list-bulleted',
+      onClick: () => {
+        console.log('Home')
+      },
+    },
+    {
+      title: 'Crear Turno',
+      icon: 'ic:outline-add-box',
+      onClick: () => {
+        console.log('Home')
+      },
+    },
+  ],
+  user: {
+    name: 'Jack Herrington',
+    role: 'Admin',
+    onClickLogout: () => {
+      console.log('Logout')
+    },
+  },
+}
 const App = () => (
   <div className="container">
-    <div>Name: host</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
+    <SideBar options={props.options} user={props.user} />
   </div>
 )
 const rootElement = document.getElementById('app')
