@@ -7,6 +7,7 @@ import Login from './components/Login'
 
 const App = () => (
   <div className="main-container">
+    <NavBar />
     <Login />
   </div>
 )

@@ -1,29 +1,32 @@
-import React, { useState } from 'react'
-import './NavBar.css'
+import React from 'react';
+import './NavBar.css';
 
-function NavBar({ }: any) {
+function NavBar() {
   return (
     <div className='container-navbar'>
-    <nav className="navbar-left navbar-expand-lg navbar-dark bg-dark py-3 navbar-custom">
-      <div className="container">
-        <div className="row w-100 align-items-center">
-          <div className="col-6">
-            <span className="navbar-brand mb-0 h1">
-              <span className="letter-m">M</span>
-              <span className="letter-t">T</span>
-            </span>
-          </div>
-          <div className="col-6 text-end">
-            <div className="container-btn d-flex justify-content-end">
-              <button className="btn btn-custom-1 me-3" type="button">Registrarse</button>
-              <button className="btn btn-custom-2 me-3" type="button">Iniciar sesión</button>
-            </div>
+      <nav className="navbar navbar-expand-lg navbar-dark navbar-custom py-3">
+        <div className="container">
+          <a className="navbar-brand" href="/">
+            <span className="letter-m">M</span>
+            <span className="letter-t">T</span>
+          </a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" href="#">Registrarse</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link btn btn-custom me-3" href="#" role="button">Iniciar sesión</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </nav>
-  </div>
-  )
+      </nav>
+    </div>
+  );
 }
 
-export default NavBar
+export default NavBar;
