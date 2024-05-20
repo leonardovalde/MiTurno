@@ -6,7 +6,7 @@ function NavBar() {
     <div className='container-navbar'>
       <nav className="navbar navbar-expand-lg navbar-dark navbar-custom py-3">
         <div className="container">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand" href="/" >
             <span className="letter-m">M</span>
             <span className="letter-t">T</span>
           </a>
@@ -16,10 +16,10 @@ function NavBar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="#">Registrarse</a>
+                <a className="nav-link" href="/">Registrarse</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link btn btn-custom me-3" href="#" role="button">Iniciar sesión</a>
+                <a className="nav-link btn btn-custom me-3" href="/login" role="button">Iniciar sesión</a>
               </li>
             </ul>
           </div>

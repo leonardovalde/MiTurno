@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  height: 120vh;
 }
 
 .container-login::before {
@@ -12,7 +13,7 @@
   background-image: url("https://www.sesamehr.co/wp-content/uploads/2022/01/Como-funcionan-los-turnos-de-trabajo-14x7-y-como-se-gestionan-768x512.jpg");
   background-size: cover;
   background-position: center;
-  filter: brightness(25%);
+  filter: brightness(20%);
 }
 
 .white-container {
@@ -20,7 +21,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 2rem 4rem;
+  padding: 3rem 6rem;
   background-color: rgba(255, 255, 255, 0.7); 
   width: auto;
   max-width: 70%;
@@ -28,6 +29,13 @@
   z-index: 1; 
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
   margin: auto;
+}
+
+.imagen-redonda {
+  border-radius: 50%;
+  width: 10rem;
+  overflow: hidden;
+  
 }
 
 .form_main {
@@ -123,15 +131,6 @@
   transition-duration: .5s;
 }
 
-.signupContainer {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
 .back-button{
   color: #766C6C;
   background-color: #DFD0B8;
@@ -164,10 +163,4 @@
 .back-button:hover::after {
   transform: translateX(600px);
   transition-duration: .5s;
-}
-
-.remember-me{
-  color: white;
-  font-size: 1em;
-  font-style: bold;
 }

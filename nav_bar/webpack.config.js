@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack')
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
-    publicPath: 'http://localhost:9009/',
+    publicPath: 'http://localhost:9008/',
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    port: 9009,
+    port: 9008,
     historyApiFallback: true,
   },
 
@@ -41,7 +41,7 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'principal',
+      name: 'nav_bar',
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {

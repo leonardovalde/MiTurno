@@ -1,5 +1,5 @@
 {
-  "name": "side_bar",
+  "name": "nav_bar",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
