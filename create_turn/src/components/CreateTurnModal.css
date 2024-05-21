@@ -1,0 +1,61 @@
+.CreateTurnModal {
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  flex-direction: column;
+  margin: auto auto;
+  height: 50vh;
+  background-color: #eae1d1;
+  min-width: 40vw;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title > h3 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+.form {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 auto;
+  gap: 1.3rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input > p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  font-weight: 200;
+  color: rgb(121, 121, 121);
+}
+
+.buttons {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.buttons > button {
+  width: 45%;
+  height: 30px;
+  border: none;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: rgb(92, 92, 92);
+}
+.cancel {
+  background-color: #daa9c0;
+}
+.create {
+  background-color: #a9f0d1;
+}
