@@ -5,9 +5,7 @@ function Login({ }: any) {
   return (
     <div className="container-login">
       <div className="white-container">
-        <form className="form_main" action="">
-          <p className="heading">Inicio de sesión</p>
-          
+        <form className="form_main" action="">          
           <img src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="Usuario" className="imagen-redonda" />
 
           <div className="inputContainer">

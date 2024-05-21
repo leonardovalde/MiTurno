@@ -16,7 +16,7 @@ function NavBar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/">Registrarse</a>
+                <a className="nav-link" href="/register">Registrarse</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link btn btn-custom me-3" href="/login" role="button">Iniciar sesión</a>
