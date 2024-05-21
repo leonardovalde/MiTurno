@@ -1,14 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from "react-router-dom";
 
 import './index.css'
-import NavBar from './components/NavBar'
+
+import NavBar from 'nav_bar/NavBar'
+import Register from './components/Register'
 
 const App = () => (
-  
   <div className="main-container">
-    <NavBar />
+    <NavBar/>
+    <Register />
   </div>
 )
 const rootElement = document.getElementById('app')
