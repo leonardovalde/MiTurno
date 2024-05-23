@@ -45,6 +45,10 @@ module.exports = (_, argv) => ({
       filename: 'remoteEntry.js',
       remotes: {
         side_bar: 'side_bar@http://localhost:9001/remoteEntry.js',
+        login: 'login@http://localhost:9009/remoteEntry.js',
+        nav_bar: 'nav_bar@http://localhost:9008/remoteEntry.js',
+        register: 'register@http://localhost:9007/remoteEntry.js',
+        home: 'home@http://localhost:9006/remoteEntry.js',
       },
       exposes: {},
       shared: {

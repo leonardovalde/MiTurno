@@ -20,10 +20,10 @@ function Login({ }: any) {
             </svg>
             <input placeholder="Contraseña" id="password" className="inputField" type="password"/>
           </div>
-          <button className="btn btn-primary" id="button">Ingresar</button>
-          <button className="btn btn-secondary" id="button">Registrarse</button>
+          <a className="btn btn-primary" id="button">Ingresar</a>
+          <a className="btn btn-secondary" id="button" href="/register">Registrarse</a>
         </form>
-        <button className="btn btn-link back-button">Regresar</button>
+        <a className="btn btn-link back-button" href="/" >Regresar</a>
       </div>
     </div>
   )

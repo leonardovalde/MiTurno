@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  } from 'react'
 import './Register.css'
 
 function Register({ }: any) {

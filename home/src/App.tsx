@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 
-//import NavBar from 'nav_bar/NavBar'
-import Login from './components/Login'
+import Home from './components/Home'
 
 const App = () => (
   <div className="main-container">
-    <Login />
+    <Home />
   </div>
 )
 const rootElement = document.getElementById('app')

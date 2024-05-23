@@ -1,6 +1,9 @@
 import React from 'react';
 import './NavBar.css';
 
+import Nav from 'react-bootstrap/Nav'
+import { NavLink } from 'react-router-dom'
+
 function NavBar() {
   return (
     <div className='container-navbar'>

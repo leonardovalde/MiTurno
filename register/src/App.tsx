@@ -2,13 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
-
-import NavBar from 'nav_bar/NavBar'
 import Register from './components/Register'
 
 const App = () => (
   <div className="main-container">
-    <NavBar/>
     <Register />
   </div>
 )
