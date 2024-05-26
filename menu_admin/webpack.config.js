@@ -45,12 +45,12 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'menu',
+      name: 'menu_admin',
       filename: 'remoteEntry.js',
       remotes: {
       },
       exposes: {
-        './menu': './src/components/Menu.tsx',
+        './menu_admin': './src/components/Menu.tsx',
       },
       shared: {
         ...deps,
