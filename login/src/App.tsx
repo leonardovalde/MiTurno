@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 
-//import NavBar from 'nav_bar/NavBar'
 import Login from './components/Login'
 
 const App = () => (
