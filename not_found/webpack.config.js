@@ -4,7 +4,11 @@ const Dotenv = require('dotenv-webpack')
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
-    publicPath: 'http://localhost:9010/',
+    publicPath: () => {
+      return argv.mode === 'production'
+        ? 'https://miturno-bqii.onrender.com/remoteEntry.js'
+        : 'http://localhost:9010/'
+    },
   },
 
   resolve: {
@@ -43,7 +47,7 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: 'not_found',
       filename: 'remoteEntry.js',
-      remotes: { },
+      remotes: {},
       exposes: {
         './NotFound': './src/components/NotFound.tsx',
       },
