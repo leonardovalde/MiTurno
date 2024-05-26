@@ -11,29 +11,16 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const { token } = await loginUser(email, password);
-      localStorage.setItem('token', token);
-
-      const decodedToken = parseJwt(token);
-      const userRole = decodedToken.role;
-
+      await loginUser(email, password);
+      const userRole = 'admin';
       if (userRole === 'admin') {
         window.location.href = '/admin/menu_admin';
-        
       } else if (userRole === 'user') {
         window.location.href = '/user/menu_user';
       }
     } catch (error) {
       console.log("Error logging in:", error);
       setError('Invalid email or password');
-    }
-  };
-
-  const parseJwt = (token) => {
-    try {
-      return JSON.parse(atob(token.split('.')[1]));
-    } catch (e) {
-      return null;
     }
   };
 
@@ -63,5 +50,6 @@ function Login() {
     </div>
   );
 }
+
 
 export default Login;
