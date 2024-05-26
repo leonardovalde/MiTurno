@@ -50,7 +50,7 @@ module.exports = (_, argv) => ({
         nav_bar: 'nav_bar@http://localhost:9008/remoteEntry.js',
         register: 'register@http://localhost:9007/remoteEntry.js',
         home: 'home@http://localhost:9006/remoteEntry.js',
-        menu: 'menu_admin@http://localhost:9005/remoteEntry.js',
+        menu_admin: 'menu_admin@http://localhost:9005/remoteEntry.js',
       },
       exposes: {},
       shared: {
