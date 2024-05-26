@@ -1,66 +1,12 @@
-.container-login {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  height: 120vh;
-}
-
-.container-login::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://www.sesamehr.co/wp-content/uploads/2022/01/Como-funcionan-los-turnos-de-trabajo-14x7-y-como-se-gestionan-768x512.jpg");
-  background-size: cover;
-  background-position: center;
-  filter: brightness(20%);
-}
-
-.white-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 3rem 6rem;
-  background-color: rgba(255, 255, 255, 0.7); 
-  width: auto;
-  max-width: 70%;
-  border-radius: 50px;
-  z-index: 1; 
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
-  margin: auto;
-}
-
-.imagen-redonda {
-  border-radius: 50%;
-  width: 10rem;
-  overflow: hidden;
-  
-}
-
-.form_main {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #3C5B6F;
-  padding: 30px;
-  border-radius: 40px;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
-  box-sizing: border-box;
-}
-
 .heading {
   font-size: 2.5em;
   color: #153448;
   font-weight: 700;
-  margin: 15px 0 30px 10%;
+  margin: 15px 0 30px 16.5rem;
 }
 
 .container-options{
-  background-color: aqua;
+  background-color: #fff9ef;
 }
 
 .btn-square {
@@ -74,112 +20,11 @@
   background-color: #dfd0b8;
 }
 
-.btn-square i {
-  margin-bottom: 5px; 
+.btn-square:hover {
+  background-color: #b6a488; /* Cambiar el color de fondo al pasar el cursor */
 }
 
-.inputContainer {
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.text-square{
+  color: #153448;
 }
 
-.inputIcon {
-  position: absolute;
-  left: 10px;
-}
-
-.inputField {
-  width: 100%;
-  height: 40px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid rgb(255, 255, 255);
-  border-radius: 30px;
-  margin: 10px 0;
-  color: black;
-  font-size: .8em;
-  font-weight: 500;
-  box-sizing: border-box;
-  padding-left: 30px;
-}
-
-.inputField:focus {
-  outline: none;
-  border-bottom: 2px solid #ffffff;
-}
-
-.inputField::placeholder {
-  color: rgb(255, 255, 255);
-  font-size: 1em;
-  font-weight: 500;
-}
-
-#button {
-  position: relative;
-  width: 100%;
-  border: 2px solid #153448;
-  background-color: #153448;
-  height: 40px;
-  color: white;
-  font-size: .8em;
-  font-weight: 500;
-  letter-spacing: 1px;
-  border-radius: 30px;
-  margin: 10px;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-#button::after {
-  content: "";
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.253);
-  height: 100%;
-  width: 150px;
-  top: 0;
-  left: -200px;
-  filter: blur(10px);
-  transition-duration: .5s;
-}
-
-#button:hover::after {
-  transform: translateX(600px);
-  transition-duration: .5s;
-}
-
-.back-button{
-  color: #766C6C;
-  background-color: #DFD0B8;
-  border: 2px solid #766C6C;
-  text-decoration: none;
-  position: relative;
-  width: 100%;
-  height: 40px;
-  font-size: .8em;
-  font-weight: 500;
-  letter-spacing: 1px;
-  border-radius: 30px;
-  margin: 10px;
-  cursor: pointer;
-  overflow: hidden;
-  margin-top: 50px;
-}
-
-.back-button::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 150px;
-  top: 0;
-  left: -200px;
-  filter: blur(10px);
-  transition-duration: .5s;
-}
-
-.back-button:hover::after {
-  transform: translateX(600px);
-  transition-duration: .5s;
-}

@@ -26,6 +26,10 @@ module.exports = (_, argv) => ({
         },
       },
       {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      },
+      {
         test: /\.(css|s[ac]ss)$/i,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
@@ -45,7 +49,9 @@ module.exports = (_, argv) => ({
       filename: 'remoteEntry.js',
       remotes: {
       },
-      exposes: {},
+      exposes: {
+        './menu': './src/components/Menu.tsx',
+      },
       shared: {
         ...deps,
         react: {

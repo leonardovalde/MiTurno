@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './Menu.css'
+import IconShift from '../../assets/icon/Exchange.png'
+import IconUsers from '../../assets/icon/Team.png'
 
 function Menu({ }: any) {
   return (
@@ -8,17 +10,17 @@ function Menu({ }: any) {
       <div className="heading">Menú</div>
       <div className="container-options"> 
         <div className="row">
-          <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
+        <div className="col-md-2 d-flex flex-column align-items-center justify-content-center"></div>
+          <div className="col-md-3 d-flex flex-column align-items-center justify-content-center">
             <button className="btn btn-square">
-              <i className="fas fa-icono"></i>
-              <img src="./assets/Team.png" alt="icon-users" className="icon-square" />
-              <span>Ver lista de Usuarios</span>
+              <img src={IconUsers} alt="icon-users" />
+              <span className='text-square'>Ver lista de Usuarios</span>
             </button>
           </div>
-          <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div className="col-md-3 d-flex flex-column align-items-left justify-content-left">
             <button className="btn btn-square">
-              <i className="fas fa-icono"></i>
-              <span>Ver lista de Turnos</span>
+            <img src={IconShift} alt="icon-shift" className="icon-square" />
+              <span className='text-square'>Ver lista de Turnos</span>
             </button>
           </div>
         </div>
