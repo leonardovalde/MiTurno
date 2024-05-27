@@ -1,42 +1,51 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
-import SideBar from 'side_bar/SideBar'
-import MenuAdmin from 'menu_admin/MenuAdmin'
+import SideBar from 'side_bar/SideBar';
+import MenuAdmin from 'menu_admin/MenuAdmin';
 
-
-const props = {
-  options: [
-    {
-      title: 'Ver Turnos',
-      icon: 'ic:baseline-format-list-bulleted',
-      onClick: () => {
-        console.log('Home')
-      },
-    },
-    {
-      title: 'Crear Turno',
-      icon: 'ic:outline-add-box',
-      onClick: () => {
-        console.log('Home')
-      },
-    },
-  ],
-  user: {
-    name: 'Jack Herrington',
-    role: 'Admin',
+const MenuAdminPage = () => {
+  const [user, setUser] = useState({
+    name: 'Nadie',
+    role: 'Ninguno',
     onClickLogout: () => {
-      console.log('Logout')
+      console.log('Logout');
+      localStorage.removeItem('user');
     },
-  },
-}
+  });
 
-function MenuAdminPage() {
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const props = {
+    options: [
+      {
+        title: 'Ver Turnos',
+        icon: 'ic:baseline-format-list-bulleted',
+        onClick: () => {
+          console.log('Home');
+        },
+      },
+      {
+        title: 'Crear Turno',
+        icon: 'ic:outline-add-box',
+        onClick: () => {
+          console.log('Home');
+        },
+      },
+    ],
+    user: user,
+  };
+
   return (
     <div>
       <SideBar options={props.options} user={props.user} />
-      <MenuAdmin/>
+      <MenuAdmin />
     </div>
-  )
-}
+  );
+};
 
-export default MenuAdminPage
+export default MenuAdminPage;
