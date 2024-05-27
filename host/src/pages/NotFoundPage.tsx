@@ -1,7 +1,7 @@
 import React from 'react'
 
-import NavBar from 'nav_bar/Navbar'
-import NotFound from 'not_found/Navbar'
+import NavBar from 'nav_bar/NavBar'
+import NotFound from 'not_found/NotFound'
 
 function NotFoundPage() {
   return (
