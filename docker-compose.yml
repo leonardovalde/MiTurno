@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  create_turn:
+    build:
+      context: ./create_turn
+      dockerfile: Dockerfile
+    ports:
+      - '9004:9004'
+    networks:
+      - frontend-network
+
+  home:
+    build:
+      context: ./home
+      dockerfile: Dockerfile
+    ports:
+      - '9006:9006'
+    networks:
+      - frontend-network
+
+  login:
+    build:
+      context: ./home
+      dockerfile: Dockerfile
+    ports:
+      - '9009:9009'
+    networks:
+      - frontend-network
+
+  menu_admin:
+    build:
+      context: ./menu_admin
+      dockerfile: Dockerfile
+    ports:
+      - '9005:9005'
+    networks:
+      - frontend-network
+
+  nav_bar:
+    build:
+      context: ./nav_bar
+      dockerfile: Dockerfile
+    ports:
+      - '9008:9008'
+    networks:
+      - frontend-network
+
+  not_found:
+    build:
+      context: ./not_found
+      dockerfile: Dockerfile
+    ports:
+      - '9010:9010'
+    networks:
+      - frontend-network
+
+  register:
+    build:
+      context: ./register
+      dockerfile: Dockerfile
+    ports:
+      - '9007:9007'
+    networks:
+      - frontend-network
+
+  side_bar:
+    build:
+      context: ./side_bar
+      dockerfile: Dockerfile
+    ports:
+      - '9001:9001'
+    networks:
+      - frontend-network
+
+  host:
+    build:
+      context: ./host
+      dockerfile: Dockerfile
+    ports:
+      - '9000:9000'
+    networks:
+      - frontend-network
+
+networks:
+  frontend-network:
+    driver: bridge
