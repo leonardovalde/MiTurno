@@ -6,7 +6,7 @@ module.exports = (_, argv) => ({
   output: {
     publicPath: () => {
       return argv.mode === 'production'
-        ? 'https://miturno.onrender.com/remoteEntry.js'
+        ? 'https://miturno.onrender.com'
         : 'http://localhost:9008/'
     },
   },
