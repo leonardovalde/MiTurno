@@ -6,8 +6,8 @@ import Login from 'login/Login'
 function LoginPage() {
   return (
     <div>
-      <NavBar/>
-      <Login/>
+      <NavBar />
+      <Login />
     </div>
   )
 }
