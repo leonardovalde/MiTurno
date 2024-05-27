@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack')
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
-    publicPath: process.env.PUBLIC_PATH || 'http://localhost:9000/',
+    publicPath: 'https://miturno-hsip.onrender.com',
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    port: process.env.PORT || 9000,
+    port: 80,
     historyApiFallback: true,
   },
 
