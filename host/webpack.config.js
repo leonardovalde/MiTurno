@@ -5,9 +5,7 @@ const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
     publicPath:
-      argv.mode === 'production'
-        ? 'https://miturno-hsip.onrender.com/'
-        : 'http://localhost:9000/',
+      process.env.PUBLIC_PATH || 'https://miturno-hosttest.onrender.com/',
   },
 
   resolve: {
@@ -15,7 +13,7 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    port: argv.mode === 'production' ? 80 : 9000,
+    port: process.env.PORT || 9000,
     historyApiFallback: true,
   },
 
