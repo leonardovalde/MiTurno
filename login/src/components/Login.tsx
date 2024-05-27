@@ -11,11 +11,18 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await loginUser(email, password);
-      const userRole = 'admin';
-      if (userRole === 'admin') {
+      const userData = await loginUser(email, password);
+      console.log("Estos es userID: ", userData);
+      const { id, role, first_name, last_name } = userData;
+      const user = {
+        id,
+        name: `${first_name} ${last_name}`,
+        role,
+      };
+      localStorage.setItem('user', JSON.stringify(user));
+      if (role === 'admin') {
         window.location.href = '/admin/menu_admin';
-      } else if (userRole === 'user') {
+      } else if (role === 'user') {
         window.location.href = '/user/menu_user';
       }
     } catch (error) {
@@ -43,13 +50,12 @@ function Login() {
           </div>
           {error && <div className="error">{error}</div>}
           <button className="btn btn-primary" id="button" type="submit">Ingresar</button>
-          <a className="btn btn-secondary"  id="button" href="/register">Registrarse</a>
+          <a className="btn btn-secondary" id="button" href="/register">Registrarse</a>
         </form>
         <a className="btn btn-link back-button" href="/">Regresar</a>
       </div>
     </div>
   );
 }
-
 
 export default Login;
