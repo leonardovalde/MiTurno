@@ -12,16 +12,16 @@ function Menu({ }: any) {
         <div className="row">
         <div className="col-md-3 d-flex flex-column align-items-center justify-content-center"></div>
           <div className="col-md-3 d-flex flex-column align-items-center justify-content-center">
-            <button className="btn btn-square">
+            <a className="btn btn-square" href="/admin/user_list_page">
               <img src={IconUsers} alt="icon-users" />
               <span className='text-square'>Ver lista de Usuarios</span>
-            </button>
+            </a>
           </div>
           <div className="col-md-3 d-flex flex-column align-items-left justify-content-left">
-            <button className="btn btn-square">
+            <a className="btn btn-square">
             <img src={IconShift} alt="icon-shift" className="icon-square" />
               <span className='text-square'>Ver lista de Turnos</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

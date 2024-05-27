@@ -19,7 +19,7 @@ function UserList() {
   }, []);
 
   return (
-    <div>
+    <div className='container-main-users'>
       {users.length > 0 ? (
         users.map((user) => (
           <label key={user.id} className="container-label">

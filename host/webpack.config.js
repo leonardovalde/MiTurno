@@ -66,6 +66,7 @@ module.exports = (_, argv) => ({
               register: 'register@http://localhost:9007/remoteEntry.js',
               home: 'home@http://localhost:9006/remoteEntry.js',
               menu_admin: 'menu_admin@http://localhost:9005/remoteEntry.js',
+              user_list:'user_list@http://localhost:9003/remoteEntry.js',
             },
       exposes: {},
       shared: {

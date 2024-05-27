@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SideBar from 'side_bar/SideBar'
-import MenuAdmin from 'menu_admin/MenuAdmin'
+import UserList from 'user_list/UserList'
 
 const props = {
   options: [
@@ -22,13 +22,13 @@ const props = {
   },
 }
 
-function MenuAdminPage() {
+function UserListPage() {
   return (
     <div>
       <SideBar options={props.options} user={props.user} />
-      <MenuAdmin/>
+      <UserList/>
     </div>
   )
 }
 
-export default MenuAdminPage
+export default UserListPage
