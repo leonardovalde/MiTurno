@@ -12,8 +12,9 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    host: '0.0.0.0',
     port: 80,
+    disableHostCheck: true,
+    allowedHosts: 'all',
     historyApiFallback: true,
   },
 
