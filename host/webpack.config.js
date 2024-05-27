@@ -4,8 +4,7 @@ const Dotenv = require('dotenv-webpack')
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
-    publicPath:
-      process.env.PUBLIC_PATH || 'https://miturno-hosttest.onrender.com/',
+    publicPath: process.env.PUBLIC_PATH || 'http://localhost:9000/',
   },
 
   resolve: {
