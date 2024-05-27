@@ -50,8 +50,8 @@ module.exports = (_, argv) => ({
       remotes: {
         side_bar: `side_bar@${
           argv.mode === 'production'
-            ? 'https://miturno-side-bar.onrender.com/remoteEntry.js'
-            : 'http://localhost:9001/remoteEntry.js'
+            ? 'side_bar@hhttps://miturno-side-bar.onrender.com/remoteEntry.js'
+            : 'side_bar@http://localhost:9001/remoteEntry.js'
         }}`,
         not_found:
           argv.mode === 'production'
