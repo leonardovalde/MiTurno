@@ -3,7 +3,6 @@ import React from 'react'
 import SideBar from 'side_bar/SideBar'
 import MenuAdmin from 'menu_admin/MenuAdmin'
 
-
 const props = {
   options: [
     {
