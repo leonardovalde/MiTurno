@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
 import SideBar, { SideBarProps } from './components/SideBar'
-
-const [user, setUser] = useState({ name: '', role: '', onClickLogout: () => {} });
-
-useEffect(() => {
-  const storedUser = localStorage.getItem('user');
-  if (storedUser) {
-    setUser(JSON.parse(storedUser));
-  }
-}, []);
 
 const props: SideBarProps = {
   options: [
@@ -31,11 +22,10 @@ const props: SideBarProps = {
     },
   ],
   user: {
-    name: 'Jack Herrington',
-    role: 'Admin',
+    name: 'User',
+    role: 'None',
     onClickLogout: () => {
       console.log('Logout')
-      localStorage.removeItem('user');
     },
   },
 }

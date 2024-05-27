@@ -5,8 +5,8 @@ import MenuAdmin from 'menu_admin/MenuAdmin';
 
 const MenuAdminPage = () => {
   const [user, setUser] = useState({
-    name: 'Nadie',
-    role: 'Ninguno',
+    name: 'None',
+    role: 'User',
     onClickLogout: () => {
       console.log('Logout');
       localStorage.removeItem('user');
@@ -20,26 +20,26 @@ const MenuAdminPage = () => {
     }
   }, []);
 
-const props = {
-  options: [
-    {
-      title: 'Home',
-      icon: 'material-symbols:home-outline-rounded',
-      onClick: () => {
-        console.log('Home')
+  const props = {
+    options: [
+      {
+        title: 'Ver Turnos',
+        icon: 'ic:baseline-format-list-bulleted',
+        onClick: () => {
+          console.log('Home');
+        },
       },
-    }
-  ],
-  user: {
-    name: 'Administrador',
-    role: 'Admin',
-    onClickLogout: () => {
-      console.log('Logout')
-    },
-  },
-}
+      {
+        title: 'Crear Turno',
+        icon: 'ic:outline-add-box',
+        onClick: () => {
+          console.log('Home');
+        },
+      },
+    ],
+    user: user,
+  };
 
-function MenuAdminPage() {
   return (
     <div>
       <SideBar options={props.options} user={props.user} />
