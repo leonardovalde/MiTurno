@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
-    "buildProd": "webpack --mode production",
+    "buildProd": "webpack --mode production --config webpack.prod.js",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && npx serve -p 9000",
     "start": "webpack serve --open --mode development",
-    "startProd": "webpack serve --open --mode development --config webpack.prod.js",
+    "startProd": "webpack serve --open --mode production",
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },
   "license": "MIT",
