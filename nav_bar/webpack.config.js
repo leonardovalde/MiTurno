@@ -4,7 +4,11 @@ const Dotenv = require('dotenv-webpack')
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
-    publicPath: 'http://localhost:9008/',
+    publicPath: () => {
+      return argv.mode === 'production'
+        ? 'https://miturno.onrender.com/'
+        : 'http://localhost:9008/'
+    },
   },
 
   resolve: {

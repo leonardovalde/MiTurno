@@ -4,7 +4,11 @@ const Dotenv = require('dotenv-webpack')
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
-    publicPath: 'http://localhost:9006/',
+    publicPath: () => {
+      return argv.mode === 'production'
+        ? 'https://miturno-home.onrender.com/'
+        : 'http://localhost:9006/'
+    },
   },
 
   resolve: {
@@ -43,7 +47,7 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: 'home',
       filename: 'remoteEntry.js',
-      remotes: { },
+      remotes: {},
       exposes: {
         './Home': './src/components/Home.tsx',
       },

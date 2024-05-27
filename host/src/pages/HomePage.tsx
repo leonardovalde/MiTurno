@@ -6,8 +6,8 @@ import Home from 'home/Home'
 function HomePage() {
   return (
     <div>
-      <NavBar/>
-      <Home/>
+      <NavBar />
+      <Home />
     </div>
   )
 }
