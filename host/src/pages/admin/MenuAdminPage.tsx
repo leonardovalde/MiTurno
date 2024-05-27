@@ -23,15 +23,8 @@ const MenuAdminPage = () => {
   const props = {
     options: [
       {
-        title: 'Ver Turnos',
-        icon: 'ic:baseline-format-list-bulleted',
-        onClick: () => {
-          console.log('Home');
-        },
-      },
-      {
-        title: 'Crear Turno',
-        icon: 'ic:outline-add-box',
+        title: 'Home',
+        icon: 'material-symbols:home-outline-rounded',
         onClick: () => {
           console.log('Home');
         },
