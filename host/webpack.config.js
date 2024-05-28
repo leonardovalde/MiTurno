@@ -71,6 +71,7 @@ module.exports = (_, argv) => ({
               menu_admin: 'menu_admin@http://localhost:9005/remoteEntry.js',
               create_turn: 'create_turn@http://localhost:9004/remoteEntry.js',
               user_list: 'user_list@http://localhost:9003/remoteEntry.js',
+              shift_list: 'shift_list@http://localhost:9012/remoteEntry.js',
             },
       exposes: {},
       shared: {
