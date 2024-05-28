@@ -4,7 +4,7 @@ export async function getListShift(userId) {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ id: userId }), // Ajusta el cuerpo de la solicitud según los requisitos de la API
+    body: JSON.stringify({ id: userId }), 
   });
 
   if (!response.ok) {

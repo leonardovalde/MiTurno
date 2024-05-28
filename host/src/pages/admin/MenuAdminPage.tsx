@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
 import SideBar from 'side_bar/SideBar';
 import MenuAdmin from 'menu_admin/MenuAdmin';
+import { useNavigate } from 'react-router-dom';
 
 const MenuAdminPage = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name: 'None',
     role: 'User',
@@ -26,7 +27,7 @@ const MenuAdminPage = () => {
         title: 'Home',
         icon: 'material-symbols:home-outline-rounded',
         onClick: () => {
-          navigate('/user/create_turn');
+          navigate('/admin/menu_admin');
         },
       },
     ],

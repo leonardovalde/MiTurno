@@ -12,6 +12,7 @@ import MenuUserPage from './pages/user/MenuUserPage'
 import TurnListUserPage from './pages/user/TurnListUserPage'
 import NotFoundPage from './pages/NotFoundPage'
 import UserListAdminPage  from './pages/admin/UserListAdminPage'
+import ShiftListAdminPage  from './pages/admin/ShiftListAdminPage'
 import './index.css'
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/admin/menu_admin" element={<MenuAdminPage />} />
       <Route path="/admin/user_list_page" element={<UserListAdminPage />} />
+      <Route path="/admin/shift_list_page" element={<ShiftListAdminPage />} />
       <Route path="/user/create_turn" element={<MenuUserPage />} />
       <Route path="/user/turn_list" element={<TurnListUserPage />} />
     </Routes>

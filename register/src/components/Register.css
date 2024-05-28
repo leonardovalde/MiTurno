@@ -1,8 +1,8 @@
 .container-register {
   position: relative;
   width: 100%;
-  min-height: 120vh;
-  height: 120vh;
+  min-height: 150vh;
+  height: 150vh;
 }
 
 .container-register::before {
@@ -18,7 +18,7 @@
 
 .white-container-register {
   position: absolute;
-  top: 50%;
+  top: 30rem;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2rem 10rem;

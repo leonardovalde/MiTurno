@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
+
 import SideBar from 'side_bar/SideBar'
 import ShiftList from 'shift_list/ShiftList'
 import { useNavigate } from 'react-router-dom';
 
 
-const TurnListUserPage = () => {
-
+const ShiftListPage = () => {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
     name: 'None',
     role: 'User',
     onClickLogout: () => {
-      navigate('/login');
+      console.log('Logout');
       localStorage.removeItem('user');
     },
   });
@@ -27,17 +27,10 @@ const TurnListUserPage = () => {
   const props = {
     options: [
       {
-        title: 'Ver Turnos',
-        icon: 'ic:baseline-format-list-bulleted',
+        title: 'Home',
+        icon: 'material-symbols:home-outline-rounded',
         onClick: () => {
-          navigate('/user/turn_list');
-        },
-      },
-      {
-        title: 'Crear Turno',
-        icon: 'ic:outline-add-box',
-        onClick: () => {
-          navigate('/user/create_turn');
+          navigate('/admin/menu_admin');
         },
       },
     ],
@@ -52,4 +45,4 @@ const TurnListUserPage = () => {
   );
 };
 
-export default TurnListUserPage;
+export default ShiftListPage
