@@ -4,7 +4,11 @@ const Dotenv = require('dotenv-webpack')
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
   output: {
-    publicPath: 'http://localhost:9003/',
+    publicPath: () => {
+      return argv.mode === 'production'
+        ? 'https://miturno-user-list.onrender.com/'
+        : 'http://localhost:9003/'
+    },
   },
 
   resolve: {
@@ -27,7 +31,7 @@ module.exports = (_, argv) => ({
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
       },
       {
         test: /\.(css|s[ac]ss)$/i,
@@ -47,7 +51,7 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: 'user_list',
       filename: 'remoteEntry.js',
-      remotes: { },
+      remotes: {},
       exposes: {
         './UserList': './src/components/UserList.tsx',
       },
