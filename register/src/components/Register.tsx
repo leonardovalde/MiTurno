@@ -7,9 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Register.css';
 
 function Register() {
+  
   const [providers, setProviders] = useState([]);
   const [selectedProvider, setSelectedProvider] = useState('');
-
   const [identifier, setIdentifier] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');

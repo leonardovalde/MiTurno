@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SideBar from 'side_bar/SideBar'
-import MenuAdmin from 'menu_admin/MenuAdmin'
+import CreateTurn from 'create_turn/CreateTurn'
 
 const props = {
   options: [
@@ -29,13 +29,13 @@ const props = {
   },
 }
 
-function MenuAdminPage() {
+function CreateTurnPage() {
   return (
     <div>
       <SideBar options={props.options} user={props.user} />
-      <MenuAdmin/>
+      <CreateTurn/>
     </div>
   )
 }
 
-export default MenuAdminPage
+export default CreateTurnPage;

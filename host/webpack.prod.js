@@ -52,6 +52,7 @@ module.exports = (_, argv) => ({
         register:
           'register@https://miturno-register.onrender.com/remoteEntry.js',
         home: 'home@https://miturno-home.onrender.com/remoteEntry.js',
+        create_turn: 'https://miturno-createturn.onrender.com/',
         menu_admin:
           'menu_admin@https://miturno-menu-admin.onrender.com/remoteEntry.js',
       },
