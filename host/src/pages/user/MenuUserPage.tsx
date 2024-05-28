@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import SideBar from 'side_bar/SideBar'
-import CreateTurn from 'create_turn/CreateTurn'
+import CreateTurnModal from 'create_turn/CreateTurnModal'
 
 const MenuUserPage = () => {
   const [user, setUser] = useState({
@@ -43,7 +43,7 @@ const MenuUserPage = () => {
   return (
     <div>
       <SideBar options={props.options} user={props.user} />
-      <CreateTurn />
+      <CreateTurnModal />
     </div>
   );
 };
