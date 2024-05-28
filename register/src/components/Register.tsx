@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { registerUser } from '../api/RegisterUser';
-import { getProviders } from '../api/ProviderApi'; // Importa la función para obtener la lista de proveedores
-import { ToastContainer, toast } from 'react-toastify';
+import { getProviders } from '../api/ProviderApi';
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './Register.css';
 
@@ -44,15 +45,30 @@ function Register() {
     }
     try {
       await registerUser(identifier, firstName, lastName, selectedProvider, address, email, password, 'user');
-      toast.success('¡Registro exitoso!', {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: false,
-        onClose: () => window.location.href = '/login'
-      });
       setError('');
+      toast.success('¡Registro exitoso!', {
+        position: "top-center",
+        autoClose: 3000,
+        transition: Slide,
+        onClose: () => window.location.href = '/login' 
+      });
     } catch (error) {
       console.error("Error al registrarse:", error);
-      setError('El registro falló. Inténtalo de nuevo.');
+      if (error.message.includes('User already exists')) {
+        setError('El usuario ya existe. Intenta con otro correo.');
+        toast.error('El usuario ya existe. Intenta con otro correo.', {
+          position: "top-center",
+          autoClose: 3000, // 5 seconds
+          transition: Slide
+        });
+      } else {
+        setError('El registro falló. Inténtalo de nuevo.');
+        toast.error('El registro falló. Inténtalo de nuevo.', {
+          position: "top-center",
+          autoClose: 5000, 
+          transition: Slide
+        });
+      }
       setSuccess('');
     }
   };
@@ -85,9 +101,9 @@ function Register() {
             </div>
             <div className="input-box address">
               <label>Organización</label>
-              <div className='select-box'>              
+              <div className='select-box'>
                 <select value={selectedProvider} onChange={handleProviderChange} required>
-                  <option value="" >Selecciona un proveedor</option>
+                  <option value="">Selecciona un proveedor</option>
                   {providers.map((provider) => (
                     <option key={provider.id} value={provider.id}>
                       {provider.name}
