@@ -16,13 +16,13 @@ import './index.css'
 const App = () => (
   <BrowserRouter>
     <Routes>
+      <Route path="*" element={<NotFoundPage />} />
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="*" element={<NotFoundPage />} />
       <Route path="/admin/menu_admin" element={<MenuAdminPage />} />
       <Route path="/admin/user_list_page" element={<UserListAdminPage />} />
-      <Route path="/user/menu_admin" element={<MenuUserPage />} />
+      <Route path="/user/create_turn" element={<MenuUserPage />} />
     </Routes>
   </BrowserRouter>
 )

@@ -23,7 +23,7 @@ function Login() {
       if (role === 'admin') {
         window.location.href = '/admin/menu_admin';
       } else if (role === 'user') {
-        window.location.href = '/user/menu_user';
+        window.location.href = '/user/create_turn';
       }
     } catch (error) {
       console.log("Error logging in:", error);
