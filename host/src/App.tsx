@@ -8,7 +8,7 @@ import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import MenuAdminPage from './pages/admin/MenuAdminPage'
-//import MenuUserPage from './pages/user/MenuUserPage'
+import MenuUserPage from './pages/user/MenuUserPage'
 import NotFoundPage from './pages/NotFoundPage'
 import UserListAdminPage  from './pages/admin/UserListAdminPage'
 import './index.css'
@@ -22,8 +22,7 @@ const App = () => (
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/admin/menu_admin" element={<MenuAdminPage />} />
       <Route path="/admin/user_list_page" element={<UserListAdminPage />} />
-     
-      
+      <Route path="/user/menu_admin" element={<MenuUserPage />} />
     </Routes>
   </BrowserRouter>
 )
