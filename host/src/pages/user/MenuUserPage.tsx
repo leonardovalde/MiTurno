@@ -36,6 +36,7 @@ const MenuUserPage = () => {
           console.log('Home')
         },
       },
+    ],
     user: user,
   };
 
