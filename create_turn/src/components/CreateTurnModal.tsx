@@ -4,6 +4,10 @@ import { DatePicker, Space } from 'antd'
 import type { DatePickerProps, GetProps } from 'antd'
 import Select from 'react-select'
 
+import { TurnApi } from '../api/TurnApi';
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 interface Props {
   onCreate: (date: string) => void
   onCancel: () => void
@@ -47,9 +51,9 @@ function CreateTurnModal(props: Props) {
         <button className="cancel" onClick={props.onCancel}>
           Cancelar
         </button>
-        <button className="create" onClick={() => props.onCreate('2022-01-01')}>
+        <a className="create" onClick={() => props.onCreate('2022-01-01')}>
           Crear
-        </button>
+        </a>
       </section>
     </div>
   )
