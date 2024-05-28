@@ -55,11 +55,14 @@ module.exports = (_, argv) => ({
               register:
                 'register@https://miturno-register.onrender.com/remoteEntry.js',
               home: 'home@https://miturno-home.onrender.com/remoteEntry.js',
-              create_turn: 'create_turn@https://miturno-createturn.onrender.com/remoteEntry.js',
+              create_turn:
+                'create_turn@https://miturno-createturn.onrender.com/remoteEntry.js',
               menu_admin:
                 'menu_admin@https://miturno-menu-admin.onrender.com/remoteEntry.js',
               user_list:
                 'user_list@https://miturno-user-list.onrender.com/remoteEntry.js',
+              shift_list:
+                'shift_list@https://miturno-shift-list.onrender.com/remoteEntry.js',
             }
           : {
               side_bar: 'side_bar@http://localhost:9001/remoteEntry.js',
