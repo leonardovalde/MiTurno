@@ -4,9 +4,9 @@ import { DatePicker, Space } from 'antd'
 import type { DatePickerProps, GetProps } from 'antd'
 import Select from 'react-select'
 
-import { TurnApi } from '../api/TurnApi';
-import { ToastContainer, toast, Slide } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { TurnApi } from '../api/TurnApi'
+import { ToastContainer, toast, Slide } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 interface Props {
   onCreate: (date: string) => void
