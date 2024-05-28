@@ -10,7 +10,6 @@ function ShiftList() {
     const fetchData = async () => {
       try {
         const shiftList = await getListShift("2dd9b9fc-c015-4724-9074-9a88d328d0ff");
-        console.log("Esto es ssssss", shiftList);
         setShifts(shiftList || []); 
       } catch (error) {
         console.error('Error fetching data from API:', error);
@@ -20,18 +19,18 @@ function ShiftList() {
   }, []);
 
   return (
-    <div className='container-main-users'>
+    <div className='container-main-userss'>
       {shifts && shifts.length > 0 ? (
         shifts.map((shift, index) => (
-          <label key={index} className="container-label">
+          <label key={index} className="container-labels">
             <div className="row">
               <div className="col-md-10 d-flex flex-column align-items-left justify-content-center">
-                <span className="label-text">Turno: {shift.shift_time}</span>
-                <span className="label-text">Usuario: {shift.user_id}</span>
+                <span className="label-texts">Turno: {shift.shift_time}</span>
+                <span className="label-texts">Usuario: {shift.user_id}</span>
               </div>
               <div className="col-md-2 d-flex flex-column align-items-center justify-content-center">
-                <a className="label-button">
-                  <img className="icon" src={IconRemove} alt="icon-remove" />
+                <a className="label-buttonss">
+                  <img className="icons" src={IconRemove} alt="icon-remove" />
                 </a>
               </div>
             </div>

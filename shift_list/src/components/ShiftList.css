@@ -1,7 +1,7 @@
-.container-main-users{
+.container-main-userss{
     margin-left: 370px;
 }
-.container-label{
+.container-labels{
     display: inline-block;
     position: relative;
     width: 450px;
@@ -14,11 +14,11 @@
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 2);
 }
   
-.label-text {
+.label-texts {
     margin-right: 30px;
 }
 
-.label-button {
+.label-buttonss{
     height: 80px;
     background:#dfd0b8;
     border-radius: 0 20px 20px 0;
@@ -26,7 +26,7 @@
     cursor: pointer;
     margin-left: 8px;
 }  
-.icon {
+.icons {
     position: absolute;
     width: 43px;
     height: 45px;
