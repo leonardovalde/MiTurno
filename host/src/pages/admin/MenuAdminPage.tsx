@@ -26,7 +26,7 @@ const MenuAdminPage = () => {
         title: 'Home',
         icon: 'material-symbols:home-outline-rounded',
         onClick: () => {
-          console.log('Home');
+          navigate('/user/create_turn');
         },
       },
     ],
