@@ -3,7 +3,7 @@ import React from 'react'
 import SideBar from 'side_bar/SideBar'
 import CreateTurn from 'create_turn/CreateTurn'
 
-const MenuAdminPage = () => {
+const MenuUserPage = () => {
   const [user, setUser] = useState({
     name: 'None',
     role: 'User',
@@ -23,13 +23,19 @@ const MenuAdminPage = () => {
   const props = {
     options: [
       {
-        title: 'Home',
-        icon: 'material-symbols:home-outline-rounded',
+        title: 'Ver Turnos',
+        icon: 'ic:baseline-format-list-bulleted',
         onClick: () => {
-          console.log('Home');
+          console.log('Home')
         },
       },
-    ],
+      {
+        title: 'Crear Turno',
+        icon: 'ic:outline-add-box',
+        onClick: () => {
+          console.log('Home')
+        },
+      },
     user: user,
   };
 
