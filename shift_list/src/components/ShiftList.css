@@ -1,8 +1,11 @@
+.container-main-users{
+    margin-left: 370px;
+}
 .container-label{
     display: inline-block;
     position: relative;
     width: 450px;
-    height: 60px;
+    height: auto;
     padding: 0px 20px;
     margin: 10px 5px 10px 5px;
     background-color: #ffffff;
@@ -16,7 +19,7 @@
 }
 
 .label-button {
-    height: 3.7rem;
+    height: 100%;
     background:#dfd0b8;
     border-radius: 0 20px 20px 0;
     padding-right: 80px;
